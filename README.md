@@ -1,1 +1,1 @@
-# atlas-softy-pinko-docker
+not empty! i would writ ea more elaborate readme but i wanna get the work done
