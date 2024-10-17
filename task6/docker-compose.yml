@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  front-end:
+    build: ./front-end
+    ports:
+      - "8080:80"
+  
+  back-end-1:
+    build: ./back-end
+    ports:
+      - "5252:5252"
+  
+  back-end-2:
+    build: ./back-end
+    ports:
+      - "5253:5252"
+
+  proxy:
+    build: ./proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - front-end
+      - back-end-1
+      - back-end-2
