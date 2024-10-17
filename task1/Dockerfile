@@ -17,10 +17,10 @@ RUN pip3 install flask
 WORKDIR /app
 
 # Copy the Python script to the container
-COPY ./server.py /app/server.py
+COPY ./server.py /app/api.py
 
 # Expose port 5252
 EXPOSE 5252
 
 # Run the Flask application
-CMD ["python3", "server.py"]
+CMD ["python3", "api.py"]
